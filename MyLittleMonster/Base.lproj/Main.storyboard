@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyLittleMonster" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="nPn-Sf-F9e">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="Mkj-WE-hZs">
+                                <rect key="frame" x="0.0" y="552" width="600" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="IRf-Cb-EPh"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="ijA-v9-GLf" customClass="MonsterImg" customModule="MyLittleMonster" customModuleProvider="target">
+                                <rect key="frame" x="208" y="85" width="553" height="591"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="553" id="9hx-2K-tq2"/>
+                                    <constraint firstAttribute="height" constant="591" id="lPq-sC-3O9"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="livespanel" translatesAutoresizingMaskIntoConstraints="NO" id="WlG-JH-u5X">
+                                <rect key="frame" x="180" y="20" width="240" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="Pjc-lZ-646"/>
+                                    <constraint firstAttribute="height" constant="64" id="hZU-rX-drL">
+                                        <variation key="heightClass=compact" constant="93"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="240" id="phA-1y-Phs"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Pjc-lZ-646"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Pjc-lZ-646"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="W9h-It-SaR">
+                                <rect key="frame" x="215" y="27" width="170" height="50"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skull" translatesAutoresizingMaskIntoConstraints="NO" id="eAo-Z2-ik7">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="48F-n8-sbg"/>
+                                            <constraint firstAttribute="height" constant="50" id="8ss-PU-gub">
+                                                <variation key="heightClass=compact" constant="51"/>
+                                            </constraint>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skull" translatesAutoresizingMaskIntoConstraints="NO" id="Hst-KF-3fM">
+                                        <rect key="frame" x="60" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Sg4-Cn-rI1"/>
+                                            <constraint firstAttribute="height" constant="50" id="qUP-8U-Eqw">
+                                                <variation key="heightClass=compact" constant="51"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="heightClass=compact" misplaced="YES">
+                                            <rect key="frame" x="68" y="0.0" width="50" height="51"/>
+                                        </variation>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skull" translatesAutoresizingMaskIntoConstraints="NO" id="KQm-o3-f0Q">
+                                        <rect key="frame" x="120" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="AB1-fy-50f">
+                                                <variation key="heightClass=compact" constant="51"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="50" id="OrK-zM-aSK"/>
+                                        </constraints>
+                                        <variation key="heightClass=compact" misplaced="YES">
+                                            <rect key="frame" x="136" y="0.0" width="50" height="51"/>
+                                        </variation>
+                                    </imageView>
+                                </subviews>
+                                <variation key="heightClass=compact" axis="horizontal" distribution="fillEqually" misplaced="YES" spacing="18">
+                                    <rect key="frame" x="213" y="42" width="186" height="51"/>
+                                </variation>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="115" y="27" width="170" height="50"/>
+                                </variation>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="hMp-h1-t1w">
+                                <rect key="frame" x="153" y="100" width="290" height="98"/>
+                                <subviews>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="zHj-zH-ItA" customClass="DragImg" customModule="MyLittleMonster" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="95" height="98"/>
+                                    </imageView>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="QZw-ec-AXN" customClass="DragImg" customModule="MyLittleMonster" customModuleProvider="target">
+                                        <rect key="frame" x="195" y="0.0" width="95" height="98"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="PuG-dx-STE"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PuG-dx-STE"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact" axis="vertical" spacing="50">
+                                    <mask key="constraints">
+                                        <include reference="PuG-dx-STE"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nPn-Sf-F9e" secondAttribute="bottom" id="2AY-ZS-eqT"/>
+                            <constraint firstItem="hMp-h1-t1w" firstAttribute="top" secondItem="WlG-JH-u5X" secondAttribute="bottom" constant="16" id="3LD-3H-iqV">
+                                <variation key="heightClass=compact" constant="-85"/>
+                            </constraint>
+                            <constraint firstItem="hMp-h1-t1w" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="7" id="7hy-yf-l7d">
+                                <variation key="heightClass=compact" constant="8"/>
+                            </constraint>
+                            <constraint firstItem="hMp-h1-t1w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-2" id="8fp-oF-isC">
+                                <variation key="heightClass=compact" constant="232"/>
+                            </constraint>
+                            <constraint firstItem="Mkj-WE-hZs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9Be-ed-CUI"/>
+                            <constraint firstAttribute="trailing" secondItem="ijA-v9-GLf" secondAttribute="trailing" constant="-161" id="BEP-5N-Qkd">
+                                <variation key="heightClass=compact" constant="41"/>
+                            </constraint>
+                            <constraint firstItem="hMp-h1-t1w" firstAttribute="top" secondItem="WlG-JH-u5X" secondAttribute="bottom" constant="15" id="F2x-6E-epc"/>
+                            <constraint firstItem="hMp-h1-t1w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hvs-hJ-DEr"/>
+                            <constraint firstItem="hMp-h1-t1w" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="IrL-B3-NZO"/>
+                            <constraint firstItem="nPn-Sf-F9e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JAa-eM-c61"/>
+                            <constraint firstItem="W9h-It-SaR" firstAttribute="centerY" secondItem="WlG-JH-u5X" secondAttribute="centerY" id="MLo-Uj-TLt">
+                                <variation key="heightClass=compact" constant="1"/>
+                            </constraint>
+                            <constraint firstItem="ijA-v9-GLf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="PtI-tM-o5i"/>
+                            <constraint firstItem="WlG-JH-u5X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Qv0-TS-V6Q"/>
+                            <constraint firstAttribute="trailing" secondItem="nPn-Sf-F9e" secondAttribute="trailing" id="U9h-ln-gx4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Mkj-WE-hZs" secondAttribute="bottom" id="ZDn-6Z-FHH"/>
+                            <constraint firstItem="WlG-JH-u5X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="cXg-QA-Pb5">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="WlG-JH-u5X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="chS-af-m49">
+                                <variation key="heightClass=compact" constant="10"/>
+                            </constraint>
+                            <constraint firstItem="WlG-JH-u5X" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="24" id="d7K-Li-yCz">
+                                <variation key="heightClass=compact" constant="-24"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="Mkj-WE-hZs" secondAttribute="trailing" id="g6G-Sd-uNQ"/>
+                            <constraint firstItem="nPn-Sf-F9e" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="iUu-QW-DBc"/>
+                            <constraint firstItem="W9h-It-SaR" firstAttribute="centerX" secondItem="WlG-JH-u5X" secondAttribute="centerX" id="pHP-au-DkA">
+                                <variation key="heightClass=compact" constant="-4"/>
+                            </constraint>
+                            <constraint firstItem="Mkj-WE-hZs" firstAttribute="top" secondItem="hMp-h1-t1w" secondAttribute="bottom" constant="29" id="xm7-rL-prN">
+                                <variation key="heightClass=compact" constant="28"/>
+                            </constraint>
+                            <constraint firstAttribute="bottomMargin" secondItem="ijA-v9-GLf" secondAttribute="bottom" constant="-76" id="ycS-hC-B77">
+                                <variation key="heightClass=compact" constant="-72"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="PtI-tM-o5i"/>
+                                <exclude reference="Qv0-TS-V6Q"/>
+                                <exclude reference="d7K-Li-yCz"/>
+                                <exclude reference="xm7-rL-prN"/>
+                                <exclude reference="7hy-yf-l7d"/>
+                                <exclude reference="F2x-6E-epc"/>
+                                <exclude reference="Hvs-hJ-DEr"/>
+                                <exclude reference="IrL-B3-NZO"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="d7K-Li-yCz"/>
+                                <include reference="xm7-rL-prN"/>
+                                <include reference="7hy-yf-l7d"/>
+                                <include reference="IrL-B3-NZO"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="Qv0-TS-V6Q"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="foodImage" destination="QZw-ec-AXN" id="lEa-R9-Q0H"/>
+                        <outlet property="heartImage" destination="zHj-zH-ItA" id="VJF-WQ-jsz"/>
+                        <outlet property="monsterImg" destination="ijA-v9-GLf" id="lQ6-2b-QrB"/>
+                        <outlet property="penalty1Img" destination="eAo-Z2-ik7" id="fbN-uj-N7o"/>
+                        <outlet property="penalty2Img" destination="Hst-KF-3fM" id="fkq-7p-9Jq"/>
+                        <outlet property="penalty3Img" destination="KQm-o3-f0Q" id="QkF-Gi-Hdc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764" y="507"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="768" height="1024"/>
+        <image name="food" width="95" height="98"/>
+        <image name="ground" width="1444" height="151"/>
+        <image name="heart" width="95" height="98"/>
+        <image name="idle1" width="889" height="615"/>
+        <image name="livespanel" width="468" height="137"/>
+        <image name="skull" width="95" height="98"/>
+    </resources>
+</document>
