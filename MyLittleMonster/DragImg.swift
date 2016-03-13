@@ -11,7 +11,7 @@ import UIKit
 
 class DragImg: UIImageView {
     
-    // === THIS FILE IS FOR DETERMINATED THE MOVES OF THE HEART AND THE FOOD IMAGE
+    // === THIS FILE DEFINED THE MOVES OF THE HEART AND THE FOOD IMAGE
     
     // First i saved the original position (x,y) in a variable
     var originalPosition: CGPoint!
