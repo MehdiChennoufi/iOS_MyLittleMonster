@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,27 +19,27 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="nPn-Sf-F9e">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="Mkj-WE-hZs">
-                                <rect key="frame" x="0.0" y="552" width="600" height="48"/>
+                                <rect key="frame" x="0.0" y="619" width="375" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="IRf-Cb-EPh"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="ijA-v9-GLf" customClass="MonsterImg" customModule="MyLittleMonster" customModuleProvider="target">
-                                <rect key="frame" x="208" y="85" width="553" height="591"/>
+                                <rect key="frame" x="-17" y="152" width="553" height="591"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="553" id="9hx-2K-tq2"/>
                                     <constraint firstAttribute="height" constant="591" id="lPq-sC-3O9"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="livespanel" translatesAutoresizingMaskIntoConstraints="NO" id="WlG-JH-u5X">
-                                <rect key="frame" x="180" y="20" width="240" height="64"/>
+                                <rect key="frame" x="67.5" y="20" width="240" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="Pjc-lZ-646"/>
                                     <constraint firstAttribute="height" constant="64" id="hZU-rX-drL">
@@ -55,7 +59,7 @@
                                 </variation>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="W9h-It-SaR">
-                                <rect key="frame" x="215" y="27" width="170" height="50"/>
+                                <rect key="frame" x="102.5" y="27" width="170" height="50"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skull" translatesAutoresizingMaskIntoConstraints="NO" id="eAo-Z2-ik7">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -74,9 +78,6 @@
                                                 <variation key="heightClass=compact" constant="51"/>
                                             </constraint>
                                         </constraints>
-                                        <variation key="heightClass=compact" misplaced="YES">
-                                            <rect key="frame" x="68" y="0.0" width="50" height="51"/>
-                                        </variation>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skull" translatesAutoresizingMaskIntoConstraints="NO" id="KQm-o3-f0Q">
                                         <rect key="frame" x="120" y="0.0" width="50" height="50"/>
@@ -86,20 +87,12 @@
                                             </constraint>
                                             <constraint firstAttribute="width" constant="50" id="OrK-zM-aSK"/>
                                         </constraints>
-                                        <variation key="heightClass=compact" misplaced="YES">
-                                            <rect key="frame" x="136" y="0.0" width="50" height="51"/>
-                                        </variation>
                                     </imageView>
                                 </subviews>
-                                <variation key="heightClass=compact" axis="horizontal" distribution="fillEqually" misplaced="YES" spacing="18">
-                                    <rect key="frame" x="213" y="42" width="186" height="51"/>
-                                </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="115" y="27" width="170" height="50"/>
-                                </variation>
+                                <variation key="heightClass=compact" axis="horizontal" distribution="fillEqually" spacing="18"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="hMp-h1-t1w">
-                                <rect key="frame" x="153" y="100" width="290" height="98"/>
+                                <rect key="frame" x="40.5" y="100" width="290" height="98"/>
                                 <subviews>
                                     <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="zHj-zH-ItA" customClass="DragImg" customModule="MyLittleMonster" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="95" height="98"/>
@@ -123,7 +116,7 @@
                                 </variation>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nPn-Sf-F9e" secondAttribute="bottom" id="2AY-ZS-eqT"/>
                             <constraint firstItem="hMp-h1-t1w" firstAttribute="top" secondItem="WlG-JH-u5X" secondAttribute="bottom" constant="16" id="3LD-3H-iqV">
@@ -173,22 +166,22 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="PtI-tM-o5i"/>
                                 <exclude reference="Qv0-TS-V6Q"/>
                                 <exclude reference="d7K-Li-yCz"/>
-                                <exclude reference="xm7-rL-prN"/>
                                 <exclude reference="7hy-yf-l7d"/>
                                 <exclude reference="F2x-6E-epc"/>
                                 <exclude reference="Hvs-hJ-DEr"/>
                                 <exclude reference="IrL-B3-NZO"/>
+                                <exclude reference="PtI-tM-o5i"/>
+                                <exclude reference="xm7-rL-prN"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
                                 <exclude reference="d7K-Li-yCz"/>
-                                <include reference="xm7-rL-prN"/>
                                 <include reference="7hy-yf-l7d"/>
                                 <include reference="IrL-B3-NZO"/>
+                                <include reference="xm7-rL-prN"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -208,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764" y="507"/>
+            <point key="canvasLocation" x="362" y="364"/>
         </scene>
     </scenes>
     <resources>

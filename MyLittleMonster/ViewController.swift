@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     
     // Others
     var penalties = 0
-    var timer: NSTimer!
+    var timer: Timer!
     var monsterHappy = false
     var currentItem: UInt32 = 0
     
@@ -49,22 +49,22 @@ class ViewController: UIViewController {
         penalty3Img.alpha = DIM_ALPHA
         
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "itemDroppedOnCharacter:", name: "onTargetDropped", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.itemDroppedOnCharacter(_:)), name: NSNotification.Name(rawValue: "onTargetDropped"), object: nil)
         
         do {
             // Long way (but more explicit)
-            let resourcePath = NSBundle.mainBundle().pathForResource("cave-music", ofType: "mp3")!
-            let url = NSURL(fileURLWithPath: resourcePath)
-            try musicPlayer = AVAudioPlayer(contentsOfURL: url)
+            let resourcePath = Bundle.main.path(forResource: "cave-music", ofType: "mp3")!
+            let url = URL(fileURLWithPath: resourcePath)
+            try musicPlayer = AVAudioPlayer(contentsOf: url)
             
             // Short way less explicit
-            try sfxBite = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("bite", ofType: "wav")!))
+            try sfxBite = AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "bite", ofType: "wav")!))
             
-            try sfxHeart = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("heart", ofType: "wav")!))
+            try sfxHeart = AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "heart", ofType: "wav")!))
             
-            try sfxDeath = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("death", ofType: "wav")!))
+            try sfxDeath = AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "death", ofType: "wav")!))
             
-            try sfxSkull = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("skull", ofType: "wav")!))
+            try sfxSkull = AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "skull", ofType: "wav")!))
             
             musicPlayer.prepareToPlay()
             musicPlayer.play()
@@ -82,14 +82,14 @@ class ViewController: UIViewController {
         
     }
     
-    func itemDroppedOnCharacter(notif: AnyObject) {
+    func itemDroppedOnCharacter(_ notif: AnyObject) {
         monsterHappy = true
         startTimer()
         
         foodImage.alpha = DIM_ALPHA
-        foodImage.userInteractionEnabled = false
+        foodImage.isUserInteractionEnabled = false
         heartImage.alpha = DIM_ALPHA
-        heartImage.userInteractionEnabled = false
+        heartImage.isUserInteractionEnabled = false
         
         if currentItem == 0 {
             sfxHeart.play()
@@ -109,13 +109,13 @@ class ViewController: UIViewController {
             timer.invalidate()
         }
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: "changeGameState", userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(ViewController.changeGameState), userInfo: nil, repeats: true)
     }
     
     func changeGameState() {
         
         if !monsterHappy {
-            penalties++
+            penalties += 1
             sfxSkull.play()
             
             if penalties == 1 {
@@ -142,16 +142,16 @@ class ViewController: UIViewController {
         
         if rand == 0 {
             foodImage.alpha = DIM_ALPHA
-            foodImage.userInteractionEnabled = false
+            foodImage.isUserInteractionEnabled = false
             
             heartImage.alpha = OPAQUE
-            heartImage.userInteractionEnabled = true
+            heartImage.isUserInteractionEnabled = true
         } else {
             heartImage.alpha = DIM_ALPHA
-            heartImage.userInteractionEnabled = false
+            heartImage.isUserInteractionEnabled = false
             
             foodImage.alpha = OPAQUE
-            foodImage.userInteractionEnabled = true
+            foodImage.isUserInteractionEnabled = true
         
         }
         
